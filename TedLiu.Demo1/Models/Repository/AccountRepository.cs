@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using Dapper;
 
 namespace TedLiu.Demo1.Models.Repository
 {
@@ -22,7 +23,7 @@ namespace TedLiu.Demo1.Models.Repository
             using (var conn = new SqlConnection(ConnectionString))
             {
                 var sql = $"select * from {Table} where Account=@Account and Password=@Password";
-
+                
 
             }
         }
